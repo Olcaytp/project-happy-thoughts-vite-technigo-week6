@@ -1,0 +1,8 @@
+.mainwrapper {
+    margin: 20px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+    height: 100vh;
+    gap: 25px;
+  }

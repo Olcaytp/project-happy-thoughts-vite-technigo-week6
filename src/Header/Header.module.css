@@ -1,0 +1,26 @@
+@import"https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;800&display=swap";
+@import"https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap";
+
+.header {
+    margin: 10px auto;
+    overflow-wrap: break-word;
+    max-width: 700px;
+    text-align: center;
+}
+
+h1 {
+    font-family: Playpen;
+    font-size: 1.5em;
+    font-weight: 900;
+    background: linear-gradient(to right, #6a5faf, #7b6eeb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+
+  @media (min-width: 675px) {
+    .h1 {
+        font-size: 40px;
+    }
+}

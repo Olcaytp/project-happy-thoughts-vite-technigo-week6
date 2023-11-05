@@ -51,6 +51,12 @@ export const PostNewThought = ({ newMessage, fetchPost }) => {
         };
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === "Enter") {
+            handleFormSubmit(event);
+        }
+    }
+
     return (
         <div className={styles.thoughtInputBox}>
             <form onSubmit={handleFormSubmit}>
@@ -61,6 +67,7 @@ export const PostNewThought = ({ newMessage, fetchPost }) => {
                     placeholder="'A heart caught in love will never break..' – Mevlana."
                     value={newThoughts}
                     onChange={(e) => setNewThoughts(e.target.value)}
+                    onKeyDown={handleKeyPress}
                 />
                 <div className={styles.characterCount}>
                     <span className={styles.error}>{errorAlert}</span>

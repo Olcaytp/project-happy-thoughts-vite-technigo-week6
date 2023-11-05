@@ -43,6 +43,12 @@
     font-size: 12px;
 }
 
+.green {
+    color: rgb(0, 128, 0);
+    font-weight: bolder;
+    font-size: 12px;
+}
+
 .h3 {
     font-size: 18px;
     margin: 7px 5px 20px 5px;
@@ -61,6 +67,7 @@ textarea {
     width: 100%;
     height: 65px;
     text-align: center;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 textarea::placeholder {
@@ -109,7 +116,7 @@ textarea:focus {
 
 @media (min-width: 675px) {
     .thoughtInputBox {
-        width: 45%;
+        width: 75%;
     }
 
     .emoji {

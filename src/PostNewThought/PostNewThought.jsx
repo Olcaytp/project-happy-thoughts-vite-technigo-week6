@@ -61,17 +61,20 @@ export const PostNewThought = ({ newMessage, fetchPost }) => {
         <div className={styles.thoughtInputBox}>
             <form onSubmit={handleFormSubmit}>
                 <h3 className={styles.h3}>What is making you happy right now?</h3>
-                <textarea
+                <textarea className={styles.textarea}
                     rows="5"
                     cols="50"
                     placeholder="'A heart caught in love will never break..' – Mevlana."
                     value={newThoughts}
                     onChange={(e) => setNewThoughts(e.target.value)}
-                    onKeyDown={handleKeyPress}
+                    onKeyDown={handleKeyPress}  style={{
+                        borderColor: (newThoughts.length >= 140) ? 'red' :
+                          (newThoughts.length > 0 || newThoughts.length < 5) ? 'red' : 'green'
+                      }}
                 />
                 <div className={styles.characterCount}>
                     <span className={styles.error}>{errorAlert}</span>
-                    <span className={`${styles.length} ${newThoughts.length >= 140 ? styles.red : (newThoughts.length > 0 && newThoughts.length <= 4) ? styles.red : ""}`}>
+                    <span className={`${styles.length} ${newThoughts.length >= 140 ? styles.red : (newThoughts.length > 0 && newThoughts.length <= 4) ? styles.red : styles.green}`}>
                         {newThoughts.length}/140
                     </span>
                     </div>

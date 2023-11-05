@@ -59,7 +59,24 @@ p {
 
     .likedCount {
         font-size: 18px;
-        left: 83%;
+        left: 90%;
+        transform: translate(-50%, -20%);
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .posts {
+        width: 100%;
+    }
+
+    p {
+        font-size: 28px;
+    }
+
+    .likedCount {
+        font-size: 18px;
+        left: 90%;
         transform: translate(-50%, -20%);
         padding: 10px;
     }

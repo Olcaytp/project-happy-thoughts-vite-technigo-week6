@@ -4,7 +4,7 @@ import { TimeDate } from "../TimeDate/TimeDate";
 
 export const DisplayPosts = ({ thoughts, updateLikedCount, likedCount }) => {
   return (
-    <div>
+    <div className={styles.mainwrapper}>
       <div className={styles.likedCount}>❤️×{likedCount}</div>
       {thoughts.map(post => (
                 <div key={post._id} className={styles.posts}>
